@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bazar Central — Producto</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="site-header" id="header-root"></header>
+
+  <main>
+    <a href="index.html" class="volver-link">&larr; Volver al catálogo</a>
+
+    <div id="producto-contenido"></div>
+  </main>
+
+  <!-- Carrito: overlay + panel lateral (igual que en el catalogo) -->
+  <div class="carrito-overlay" id="carrito-overlay"></div>
+  <aside class="carrito-drawer" id="carrito-drawer">
+    <div class="carrito-drawer__header">
+      <h2>Tu carrito</h2>
+      <button id="btn-cerrar-carrito" class="btn-cerrar" type="button" aria-label="Cerrar">✕</button>
+    </div>
+
+    <ul class="carrito-lista" id="carrito-lista"></ul>
+    <p class="carrito-vacio" id="carrito-vacio">Tu carrito está vacío. Agrega productos desde el catálogo.</p>
+
+    <div class="carrito-drawer__footer">
+      <div class="carrito-total-row">
+        <span>Total</span>
+        <strong id="carrito-total">$0</strong>
+      </div>
+      <button id="btn-comprar" class="btn btn-primary btn-full" type="button">Comprar</button>
+      <button id="btn-vaciar-carrito" class="btn btn-secondary btn-full" type="button">Vaciar carrito</button>
+    </div>
+  </aside>
+
+  <script src="api.js"></script>
+  <script src="auth.js"></script>
+  <script src="carrito.js"></script>
+  <script src="producto.js"></script>
+</body>
+</html>

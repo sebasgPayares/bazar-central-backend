@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bazar Central — Gestión de pedidos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="site-header" id="header-root"></header>
+
+  <main>
+    <h1 class="page-title">Gestión de pedidos</h1>
+    <p class="page-subtitle">Todos los pedidos de todos los clientes. Cambia el estado a medida que los procesas.</p>
+
+    <div id="pedidos-admin-lista"></div>
+    <div id="pedidos-admin-vacio" class="empty-state" style="display:none;">
+      Todavía no hay pedidos registrados.
+    </div>
+  </main>
+
+  <script src="api.js"></script>
+  <script src="auth.js"></script>
+  <script src="panel-pedidos.js"></script>
+</body>
+</html>
