@@ -3,7 +3,7 @@
    Cambia esta URL si mueves el backend a otro puerto/servidor.
    ============================================ */
 
-const API_BASE = 'http://localhost:8094/api';
+ const API_BASE = 'https://bazar-central-backend-production.up.railway.app/api';
 const AUTH_KEY = 'bazarcentral_sesion';
 
 /* ---------- Sesion (guardada en el navegador) ---------- */

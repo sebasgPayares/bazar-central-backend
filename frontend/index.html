@@ -5,15 +5,40 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Bazar Central — Catálogo</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&display=swap" rel="stylesheet">
+  <meta name="theme-color" content="#C8321F">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
   <header class="site-header" id="header-root"></header>
 
-  <main>
-    <h1 class="page-title">Lo que hay hoy en la tienda</h1>
+  <section class="hero">
+    <div class="hero__toldo" aria-hidden="true"></div>
+    <div class="hero__inner">
+      <div>
+        <h1 class="hero__titulo">Un poco de todo, en un solo lugar.</h1>
+        <p class="hero__texto">
+          Comida, bebidas, ropa, tecnología y más. Arma tu pedido en línea
+          y sigue su estado desde tu cuenta.
+        </p>
+        <div class="hero__acciones">
+          <a href="#catalogo" class="btn btn-primary btn-grande">Ver el catálogo</a>
+          <a href="registro.html" class="btn btn-secondary btn-grande">Crear mi cuenta</a>
+        </div>
+      </div>
+      <div class="vitrina" aria-hidden="true">
+        <span class="vitrina__letrero">Abierto</span>
+        <div class="vitrina__estante"><span>🍔</span><span>🥤</span><span>🍞</span><span>🧃</span></div>
+        <div class="vitrina__estante"><span>👕</span><span>👟</span><span>📚</span><span>🧸</span></div>
+        <div class="vitrina__estante"><span>💻</span><span>📱</span><span>🎧</span><span>🏠</span></div>
+      </div>
+    </div>
+  </section>
+
+  <main id="catalogo">
+    <h2 class="page-title">Lo que hay hoy en la tienda</h2>
     <p class="page-subtitle">
       Un poco de todo: comida, bebidas, ropa y más. Este catálogo se actualiza
       en tiempo real con lo que el dueño gestiona desde el panel.
@@ -29,6 +54,13 @@
       No encontramos productos con ese filtro.
     </div>
   </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <span>Bazar Central, tienda en línea con Java, Spring Boot y MySQL.</span>
+      <span>Desarrollado por Sebastián García</span>
+    </div>
+  </footer>
 
   <!-- Carrito: overlay + panel lateral -->
   <div class="carrito-overlay" id="carrito-overlay"></div>
@@ -55,5 +87,6 @@
   <script src="auth.js"></script>
   <script src="carrito.js"></script>
   <script src="app.js"></script>
+  <script src="efectos.js"></script>
 </body>
 </html>

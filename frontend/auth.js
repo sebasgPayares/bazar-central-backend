@@ -43,7 +43,8 @@ function renderHeader(paginaActiva) {
 
   const iconoCarrito = (paginaActiva === 'catalogo' || paginaActiva === 'producto')
     ? `<button class="btn-cart" id="btn-abrir-carrito" type="button" aria-label="Ver carrito">
-         🛒 <span class="btn-cart__contador" id="carrito-contador">0</span>
+         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 7h14l-1.2 11.2a2 2 0 0 1-2 1.8H8.2a2 2 0 0 1-2-1.8L5 7z"/><path d="M9 7V6a3 3 0 0 1 6 0v1"/></svg>
+         <span class="btn-cart__contador" id="carrito-contador">0</span>
        </button>`
     : '';
 
