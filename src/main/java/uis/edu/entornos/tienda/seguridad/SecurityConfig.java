@@ -60,6 +60,10 @@ public class SecurityConfig {
 
 				// Solo ADMIN puede gestionar usuarios desde el panel
 				.requestMatchers("/api/usuarios/**").hasRole("ADMIN")
+				
+
+                // Solo ADMIN puede gestionar proveedores
+                .requestMatchers("/api/proveedores/**").hasRole("ADMIN")
 
 				// Pedidos: "mis-pedidos" es de cualquier usuario logueado (antes que la
 				// regla general de abajo, porque el orden de las reglas importa).
