@@ -2,3 +2,8 @@ target/
 *.class
 .settings/
 application-local.properties
+.classpath
+.project
+.factorypath
+.idea/
+*.zip
