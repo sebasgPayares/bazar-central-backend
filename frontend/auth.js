@@ -26,6 +26,7 @@ function renderHeader(paginaActiva) {
   if (esAdmin) {
     nav += `<a href="panel.html" class="${paginaActiva === 'panel' ? 'is-active' : ''}">Panel del negocio</a>`;
     nav += `<a href="panel-pedidos.html" class="${paginaActiva === 'panel-pedidos' ? 'is-active' : ''}">Pedidos</a>`;
+    nav += `<a href="proveedores.html" class="${paginaActiva === 'proveedores' ? 'is-active' : ''}">Proveedores</a>`;
   }
 
   let bloqueSesion;
@@ -68,10 +69,10 @@ function renderHeader(paginaActiva) {
  * manda a login.html y no deja que el resto del panel cargue.
  * Devuelve true si puede continuar, false si ya redirigio.
  */
-function protegerSoloAdmin() {
+function protegerSoloAdmin(destino = 'panel') {
   const sesion = obtenerSesion();
   if (!sesion || sesion.rol !== 'ADMIN') {
-    window.location.href = 'login.html?destino=panel';
+    window.location.href = `login.html?destino=${destino}`;
     return false;
   }
   return true;

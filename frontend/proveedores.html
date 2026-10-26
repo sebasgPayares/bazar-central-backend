@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bazar Central — Proveedores</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&display=swap" rel="stylesheet">
+  <meta name="theme-color" content="#C8321F">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="site-header" id="header-root"></header>
+
+  <main>
+    <h1 class="page-title">Proveedores</h1>
+    <p class="page-subtitle">
+      Registra y administra los proveedores del negocio. El NIT no se puede repetir.
+    </p>
+
+    <div class="admin-layout">
+      <section class="panel-card">
+        <h2 id="form-titulo">Agregar proveedor</h2>
+        <form id="form-proveedor" novalidate>
+
+          <div class="field">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" maxlength="120" required />
+          </div>
+
+          <div class="field">
+            <label for="nit">NIT</label>
+            <input type="text" id="nit" maxlength="30" placeholder="900123456-7" required />
+          </div>
+
+          <div class="field">
+            <label for="contacto">Persona de contacto (opcional)</label>
+            <input type="text" id="contacto" maxlength="100" />
+          </div>
+
+          <div class="field">
+            <label for="telefono">Teléfono (opcional)</label>
+            <input type="text" id="telefono" maxlength="20" inputmode="tel" />
+          </div>
+
+          <div class="field">
+            <label for="email">Correo (opcional)</label>
+            <input type="email" id="email" maxlength="150" placeholder="ventas@proveedor.com" />
+          </div>
+
+          <div class="field">
+            <label for="direccion">Dirección (opcional)</label>
+            <input type="text" id="direccion" maxlength="200" />
+          </div>
+
+          <p class="form-error" id="form-error"></p>
+
+          <button type="submit" class="btn btn-primary" id="btn-guardar">Guardar proveedor</button>
+          <button type="button" class="btn btn-secondary" id="btn-cancelar" style="display:none;">Cancelar edición</button>
+        </form>
+      </section>
+
+      <section>
+        <div class="field" style="padding: 2px 2px 0;">
+          <label for="buscar">Buscar por nombre o NIT</label>
+          <input type="search" id="buscar" placeholder="Escribe para filtrar..." />
+        </div>
+        <table class="admin-table">
+          <thead>
+            <tr>
+              <th>Proveedor</th>
+              <th>NIT</th>
+              <th>Contacto</th>
+              <th>Correo</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody id="tabla-proveedores"></tbody>
+        </table>
+      </section>
+    </div>
+  </main>
+
+  <script src="api.js"></script>
+  <script src="auth.js"></script>
+  <script src="proveedores.js"></script>
+  <script src="efectos.js"></script>
+</body>
+</html>

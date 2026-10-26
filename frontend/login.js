@@ -26,6 +26,8 @@ form.addEventListener('submit', async (e) => {
     const destino = params.get('destino');
     if (destino === 'panel' && respuesta.rol === 'ADMIN') {
       window.location.href = 'panel.html';
+    } else if (destino === 'proveedores' && respuesta.rol === 'ADMIN') {
+      window.location.href = 'proveedores.html';
     } else {
       window.location.href = 'index.html';
     }
