@@ -1,5 +1,5 @@
 /* ============================================
-   Bazar Central — efectos visuales
+   Voltio — efectos visuales
    Solo presentación: no llama a la API ni cambia datos.
    ============================================ */
 (function () {

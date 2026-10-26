@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Bazar Central — Catálogo</title>
+  <title>Voltio — Tecnología que prende</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&display=swap" rel="stylesheet">
-  <meta name="theme-color" content="#C8321F">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <meta name="theme-color" content="#07080d">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -18,34 +18,64 @@
     <div class="hero__toldo" aria-hidden="true"></div>
     <div class="hero__inner">
       <div>
-        <h1 class="hero__titulo">Un poco de todo, en un solo lugar.</h1>
+        <span class="hero__etiqueta"><i></i> Envíos a toda Colombia</span>
+        <h1 class="hero__titulo">Tecnología que <em>prende</em>.</h1>
         <p class="hero__texto">
-          Comida, bebidas, ropa, tecnología y más. Arma tu pedido en línea
-          y sigue su estado desde tu cuenta.
+          Celulares, portátiles, audio y gaming con stock real. Arma tu pedido
+          en línea y sigue su estado desde tu cuenta.
         </p>
         <div class="hero__acciones">
-          <a href="#catalogo" class="btn btn-primary btn-grande">Ver el catálogo</a>
+          <a href="#catalogo" class="btn btn-primary btn-grande">Explorar la tienda</a>
           <a href="registro.html" class="btn btn-secondary btn-grande">Crear mi cuenta</a>
+        </div>
+        <div class="hero__datos">
+          <div><strong>Stock real</strong><span>actualizado al instante</span></div>
+          <div><strong>Pago seguro</strong><span>sesión protegida con JWT</span></div>
+          <div><strong>Seguimiento</strong><span>de cada pedido</span></div>
         </div>
       </div>
       <div class="vitrina" aria-hidden="true">
-        <span class="vitrina__letrero">Abierto</span>
-        <div class="vitrina__estante"><span>🍔</span><span>🥤</span><span>🍞</span><span>🧃</span></div>
-        <div class="vitrina__estante"><span>👕</span><span>👟</span><span>📚</span><span>🧸</span></div>
-        <div class="vitrina__estante"><span>💻</span><span>📱</span><span>🎧</span><span>🏠</span></div>
+        <span class="vitrina__letrero">Nuevo · 2026</span>
+        <svg viewBox="0 0 400 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="vg1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2a2f4a"/><stop offset="1" stop-color="#12141e"/></linearGradient>
+            <linearGradient id="vg2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#c6ff3d"/><stop offset="1" stop-color="#7c5cff"/></linearGradient>
+          </defs>
+          <g class="vitrina__flota vitrina__flota--2">
+            <rect x="52" y="92" width="236" height="152" rx="12" fill="url(#vg1)" stroke="#ffffff" stroke-opacity=".2"/>
+            <rect x="62" y="102" width="216" height="132" rx="6" fill="#0a0c14"/>
+            <rect x="62" y="102" width="216" height="132" rx="6" fill="url(#vg2)" opacity=".22"/>
+            <path d="M80 210 120 168 150 190 190 140 222 178 260 130" stroke="#c6ff3d" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M30 252h280l-18 14H48z" fill="#1c2033" stroke="#ffffff" stroke-opacity=".18"/>
+          </g>
+          <g class="vitrina__flota">
+            <rect x="232" y="128" width="104" height="196" rx="20" fill="#0d0f17" stroke="#c6ff3d" stroke-opacity=".7" stroke-width="2"/>
+            <rect x="241" y="140" width="86" height="172" rx="12" fill="url(#vg2)" opacity=".85"/>
+            <rect x="268" y="146" width="32" height="7" rx="3.5" fill="#0d0f17"/>
+            <circle cx="284" cy="226" r="26" stroke="#0a0c05" stroke-opacity=".55" stroke-width="3"/>
+            <path d="M287 207 276 229h8l-3 14 12-23h-8z" fill="#0a0c05" fill-opacity=".8"/>
+          </g>
+          <g class="vitrina__flota vitrina__flota--3">
+            <path d="M70 318v-14a30 30 0 0 1 60 0v14" stroke="#29d3ff" stroke-width="5" stroke-linecap="round" transform="translate(0 -6)"/>
+            <rect x="62" y="304" width="16" height="30" rx="7" fill="#29d3ff" transform="translate(0 -6)"/>
+            <rect x="122" y="304" width="16" height="30" rx="7" fill="#29d3ff" transform="translate(0 -6)"/>
+          </g>
+        </svg>
+        <div class="vitrina__chip vitrina__chip--a"><b>5G</b> Celulares</div>
+        <div class="vitrina__chip vitrina__chip--b"><b>OLED</b> Pantallas</div>
       </div>
     </div>
   </section>
 
   <main id="catalogo">
-    <h2 class="page-title">Lo que hay hoy en la tienda</h2>
+    <h2 class="page-title">Lo último en tecnología</h2>
     <p class="page-subtitle">
-      Un poco de todo: comida, bebidas, ropa y más. Este catálogo se actualiza
-      en tiempo real con lo que el dueño gestiona desde el panel.
+      Celulares, computadores, audio y más. El catálogo y el stock se actualizan
+      en tiempo real desde el panel de administración.
     </p>
 
     <div class="toolbar">
-      <input type="text" id="buscador" placeholder="Buscar un producto..." />
+      <input type="text" id="buscador" placeholder="Buscar celulares, portátiles, audífonos..." />
       <div id="categorias"></div>
     </div>
 
@@ -57,7 +87,7 @@
 
   <footer class="site-footer">
     <div class="site-footer__inner">
-      <span>Bazar Central, tienda en línea con Java, Spring Boot y MySQL.</span>
+      <span>Voltio · Tecnología que prende. Tienda en línea con Java, Spring Boot y MySQL.</span>
       <span>Desarrollado por Sebastián García</span>
     </div>
   </footer>

@@ -1,5 +1,5 @@
 /* ============================================
-   Bazar Central — sesion y header dinamico
+   Voltio — sesion y header dinamico
    Depende de api.js (obtenerSesion, cerrarSesion, escaparHtml)
    ============================================ */
 
@@ -19,7 +19,7 @@ function renderHeader(paginaActiva) {
   const sesion = obtenerSesion();
   const esAdmin = sesion && sesion.rol === 'ADMIN';
 
-  let nav = `<a href="index.html" class="${paginaActiva === 'catalogo' ? 'is-active' : ''}">Catálogo</a>`;
+  let nav = `<a href="index.html" class="${paginaActiva === 'catalogo' ? 'is-active' : ''}">Tienda</a>`;
   if (sesion && !esAdmin) {
     nav += `<a href="mis-pedidos.html" class="${paginaActiva === 'mis-pedidos' ? 'is-active' : ''}">Mis pedidos</a>`;
   }
@@ -51,7 +51,7 @@ function renderHeader(paginaActiva) {
 
   root.innerHTML = `
     <div class="site-header__inner">
-      <a href="index.html" class="site-header__brand">Bazar <span>Central</span></a>
+      <a href="index.html" class="site-header__brand">Volt<span>io</span></a>
       <nav class="site-header__nav">${nav}</nav>
       <div class="site-header__sesion">
         ${iconoCarrito}

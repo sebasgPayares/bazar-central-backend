@@ -27,13 +27,13 @@ function mostrarNoEncontrado() {
     <div class="empty-state">
       No encontramos este producto. Puede que ya no esté disponible.
       <br><br>
-      <a href="index.html" class="btn btn-primary btn-small">Volver al catálogo</a>
+      <a href="index.html" class="btn btn-primary btn-small">Volver a la tienda</a>
     </div>
   `;
 }
 
 function renderizarProducto(producto) {
-  document.title = `Bazar Central — ${producto.nombre}`;
+  document.title = `Voltio — ${producto.nombre}`;
 
   const tieneImagen = producto.imagenUrl && producto.imagenUrl.trim() !== '';
   const agotado = producto.stock <= 0;

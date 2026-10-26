@@ -1,5 +1,5 @@
 /* ============================================
-   Bazar Central — carrito de compras
+   Voltio — carrito de compras
    El carrito vive en el navegador (localStorage) mientras el cliente
    arma su compra. Al dar "Comprar" se manda a /api/pedidos, que valida
    stock, lo descuenta, y crea el pedido de verdad en la base de datos.
