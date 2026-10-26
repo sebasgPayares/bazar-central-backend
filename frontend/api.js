@@ -68,6 +68,14 @@ const TiposDocumentoAPI = {
   listar: () => apiFetch('/tipos-documento'),
 };
 
+const ProveedoresAPI = {
+  listar: () => apiFetch('/proveedores'),
+  obtener: (id) => apiFetch(`/proveedores/${id}`),
+  crear: (proveedor) => apiFetch('/proveedores', { method: 'POST', body: JSON.stringify(proveedor) }),
+  actualizar: (id, proveedor) => apiFetch(`/proveedores/${id}`, { method: 'PUT', body: JSON.stringify(proveedor) }),
+  eliminar: (id) => apiFetch(`/proveedores/${id}`, { method: 'DELETE' }),
+};
+
 const PedidosAPI = {
   crear: (items) => apiFetch('/pedidos', { method: 'POST', body: JSON.stringify({ items }) }),
   misPedidos: () => apiFetch('/pedidos/mis-pedidos'),
