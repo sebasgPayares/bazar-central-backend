@@ -14,7 +14,7 @@ pedidos y proveedores.
 | Integrante | CRUD / aporte principal |
 |---|---|
 | Sebastián García | CRUD de **Productos** y **Usuarios**, autenticación JWT y roles, pedidos, frontend, despliegue |
-| _Nombre del compañero_ | CRUD de **Proveedores** (`/api/proveedores`) |
+| Jhoen Felizzola | CRUD de **Proveedores** (`/api/proveedores`) |
 
 > Cada integrante trabajó en su propia rama y entregó mediante Pull Request (ver historial del repositorio).
 
