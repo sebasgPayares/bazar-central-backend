@@ -1,0 +1,5 @@
+# Configuracion para Netlify cuando se conecta con GitHub.
+# En Netlify, "Base directory" debe ser: frontend-react
+[build]
+  command = "npm run build"
+  publish = "dist"
