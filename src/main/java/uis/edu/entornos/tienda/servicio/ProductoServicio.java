@@ -62,6 +62,10 @@ public class ProductoServicio implements IProductoServicio {
 	@Override
 	public void borrarProducto(Long id) {
 		buscarProducto(id);
+		// Si el producto aparece en pedidos, la llave foranea de detalle_pedido
+		// impediria borrarlo. Primero se desvincula de esos detalles (que guardan
+		// su propio nombre y precio) y luego se elimina el producto.
+		productoRepositorio.desvincularDeDetalles(id);
 		productoRepositorio.deleteById(id);
 	}
 
