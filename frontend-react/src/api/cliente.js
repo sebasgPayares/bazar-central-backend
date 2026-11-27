@@ -52,8 +52,8 @@ export async function apiFetch(path, options = {}) {
       window.dispatchEvent(new Event('sesion-expirada'));
     }
 
-    // Errores de validacion (400) traen el detalle de cada campo en data.campos
-    const detalleCampos = data?.campos ? ` ${Object.values(data.campos).join('. ')}` : '';
+    // Errores de validacion (400) traen el detalle de cada campo en data.camposInvalidos
+    const detalleCampos = data?.camposInvalidos ? ` ${Object.values(data.camposInvalidos).join('. ')}` : '';
     const mensaje = (data && (data.mensaje || data.error)) || `Error ${res.status}`;
     throw new Error(mensaje + detalleCampos);
   }

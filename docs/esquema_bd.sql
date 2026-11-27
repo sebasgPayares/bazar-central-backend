@@ -1,8 +1,9 @@
 -- ============================================================
--- Bazar Central · Esquema de base de datos (solo estructura)
+-- Voltio (antes Bazar Central) · Esquema de base de datos (estructura)
 -- Motor: MySQL / MariaDB · Base: tiendagenericaII2026
 -- Nota: en el proyecto, Hibernate (ddl-auto=update) crea/actualiza
 -- estas tablas al arrancar. Este script es la referencia del diseño.
+-- Despues de este script, ejecutar docs/datos_iniciales.sql.
 -- ============================================================
 
 CREATE DATABASE IF NOT EXISTS tiendagenericaII2026
